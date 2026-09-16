@@ -27,10 +27,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 a {
   color: inherit;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+input,
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 /* ===== KEYFRAMES ===== */

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import BackgroundFX from "./components/BackgroundFX";
 import Footer from "./components/Footer";
+import DisableRightClick from "./components/DisableRightClick";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.grasstunes.music"),
@@ -40,6 +41,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body>
+        <DisableRightClick />
         <BackgroundFX />
         <main className="site-main">{children}</main>
         <Footer />

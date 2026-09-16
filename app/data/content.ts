@@ -79,6 +79,11 @@ export interface Performance {
 }
 
 export const PERFORMANCES: Performance[] = [
+  { venue: "Hamro Utsav", year: "2017" },
+  { venue: "Patan College for Professional Studies", year: "2017" },
+  { venue: "Labim Mall", year: "2017" },
+  { venue: "Purple Haze", year: "2017" },
+  { venue: "Sofar Sounds", year: "2018" },
   { venue: "Kathmandu Blues and Roots Festival", year: "2019" },
   { venue: "Ramsterdam Cafe, Kathmandu", year: "2025" },
   { venue: "Tito's Pub, Thamel, Kathmandu", year: "2026" },
