@@ -14,13 +14,17 @@ export default function GrassNewsPage() {
       <div className="page">
         <section className="section">
           <h2 className="section-title">Announcements</h2>
-          <ul className="performance-list">
-            {ANNOUNCEMENTS.map((item) => (
-              <li key={item} className="performance-item">
-                <span className="performance-venue">{item}</span>
-              </li>
-            ))}
-          </ul>
+          {ANNOUNCEMENTS.map((item) => (
+            <article key={item.title} className="announcement-card">
+              <h3 className="announcement-title">{item.title}</h3>
+              <p className="announcement-timestamp">{item.timestamp}</p>
+              {item.body.map((paragraph, i) => (
+                <p key={i} className="announcement-paragraph">
+                  {paragraph}
+                </p>
+              ))}
+            </article>
+          ))}
         </section>
 
         <section className="section">

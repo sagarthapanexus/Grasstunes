@@ -1,6 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
+
+export interface AudioPlayerHandle {
+  togglePlay: () => void;
+}
 
 const EQ_BARS = [
   { duration: "0.4s", maxHeight: "10px" },
@@ -17,15 +21,19 @@ function formatTime(secs: number): string {
   return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
-export default function AudioPlayer({
-  title,
-  artist,
-  src,
-}: {
+const AudioPlayer = forwardRef<AudioPlayerHandle, {
   title: string;
   artist: string;
   src: string;
-}) {
+  autoPlay?: boolean;
+  onEnded?: () => void;
+  onNext?: () => void;
+  onPrev?: () => void;
+  onPlayStateChange?: (isPlaying: boolean) => void;
+}>(function AudioPlayer(
+  { title, artist, src, autoPlay = false, onEnded, onNext, onPrev, onPlayStateChange },
+  ref
+) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -60,13 +68,32 @@ export default function AudioPlayer({
     }
   };
 
+  useImperativeHandle(ref, () => ({ togglePlay }));
+
   const handleLoadedMetadata = () => {
     if (audioRef.current) setDuration(audioRef.current.duration);
   };
 
-  const handleEnded = () => setIsPlaying(false);
-  const handlePlay = () => setIsPlaying(true);
-  const handlePause = () => setIsPlaying(false);
+  useEffect(() => {
+    if (autoPlay) {
+      audioRef.current?.play().catch(() => {});
+    }
+    // Only run on mount — this component is remounted (via `key`) per track.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleEnded = () => {
+    setIsPlaying(false);
+    onEnded?.();
+  };
+  const handlePlay = () => {
+    setIsPlaying(true);
+    onPlayStateChange?.(true);
+  };
+  const handlePause = () => {
+    setIsPlaying(false);
+    onPlayStateChange?.(false);
+  };
 
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const audio = audioRef.current;
@@ -153,6 +180,14 @@ export default function AudioPlayer({
       </div>
 
       <div className="player-controls">
+        {onPrev && (
+          <button className="skip-btn" onClick={onPrev} aria-label="Previous track">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
+            </svg>
+          </button>
+        )}
+
         <button
           className={`play-btn${isPlaying ? " playing" : ""}`}
           onClick={togglePlay}
@@ -169,6 +204,14 @@ export default function AudioPlayer({
             </svg>
           )}
         </button>
+
+        {onNext && (
+          <button className="skip-btn" onClick={onNext} aria-label="Next track">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 6h2v12h-2zM6 6l8.5 6L6 18z" />
+            </svg>
+          </button>
+        )}
 
         <div className="progress-area">
           <span className="time-label">{formatTime(currentTime)}</span>
@@ -226,4 +269,6 @@ export default function AudioPlayer({
       </div>
     </div>
   );
-}
+});
+
+export default AudioPlayer;

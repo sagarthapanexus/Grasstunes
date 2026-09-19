@@ -1553,6 +1553,199 @@ textarea {
   transform: scale(0.95);
 }
 
+.skip-btn {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.skip-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.skip-btn:hover {
+  color: var(--neon-green);
+  transform: scale(1.1);
+}
+
+.song-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.song-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+}
+
+.song-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.song-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.song-row.active {
+  background: rgba(168, 230, 61, 0.08);
+}
+
+.song-row-index {
+  flex-shrink: 0;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.song-row-number {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.song-row-play {
+  width: 14px;
+  height: 14px;
+  color: #fff;
+  display: none;
+  position: absolute;
+}
+
+.song-row:hover .song-row-number {
+  display: none;
+}
+
+.song-row:hover .song-row-play {
+  display: block;
+}
+
+.song-row-play-active {
+  display: block;
+  color: var(--neon-green);
+}
+
+.song-row-eq {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+}
+
+.song-row-eq span {
+  width: 3px;
+  background: var(--neon-green);
+  border-radius: 2px;
+  animation: eqBounce 0.6s ease-in-out infinite alternate;
+  height: 4px;
+}
+
+.song-row-eq span:nth-child(1) {
+  animation-duration: 0.4s;
+}
+
+.song-row-eq span:nth-child(2) {
+  animation-duration: 0.6s;
+}
+
+.song-row-eq span:nth-child(3) {
+  animation-duration: 0.5s;
+}
+
+.song-row-cover {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.song-row-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.song-row-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-row.active .song-row-title {
+  color: var(--neon-green);
+}
+
+.song-row-artist {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.announcement-card {
+  max-width: 640px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(168, 230, 61, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.announcement-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.announcement-timestamp {
+  font-size: 12px;
+  color: rgba(168, 230, 61, 0.7);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.announcement-paragraph {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 12px;
+}
+
+.announcement-paragraph:last-child {
+  margin-bottom: 0;
+}
+
 .progress-area {
   flex: 1;
   display: flex;

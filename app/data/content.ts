@@ -92,7 +92,23 @@ export const PERFORMANCES: Performance[] = [
 
 export const MEDIA_COVERAGE_VIDEO_ID = "UFMl8Ccw3pQ";
 
-export const ANNOUNCEMENTS: string[] = ["EP – Coming soon!"];
+export interface Announcement {
+  title: string;
+  timestamp: string;
+  body: string[];
+}
+
+export const ANNOUNCEMENTS: Announcement[] = [
+  {
+    title: "GrassTunes Finish Recording Debut EP!",
+    timestamp: "Saturday, September 19, 2026 · 3:43 PM",
+    body: [
+      "We are thrilled to announce that GrassTunes have officially wrapped up recording for their very first EP!",
+      "The band has been hard at work in the studio bringing their unique sound to life, and the tracks are officially locked in. We cannot wait for you to hear what we have been cooking up.",
+      "Stay tuned right here for official release dates, sneak peeks, and tracklist reveals dropping very soon. Get ready for new music!",
+    ],
+  },
+];
 
 export const NEWS_ITEMS: string[] = ["EP – Coming soon!"];
 
@@ -105,8 +121,66 @@ export const FOCUS_SINGLE = {
 export const LIVE_TRACK = {
   title: "Timi Jastai Ma",
   artist: "GrassTunes · Live in Ramsterdam",
-  src: "/Timi Jastai Ma  Grasstunes  Live in Ramsterdam.mp3",
+  src: "/Timi Jastai Ma - Live in Ramsterdam.mp3",
 };
+
+export interface Song {
+  title: string;
+  artist: string;
+  src: string;
+  cover: string;
+}
+
+export const SONGS: Song[] = [
+  {
+    title: "Timi Jastai Ma",
+    artist: "GrassTunes · Live in Ramsterdam",
+    src: "/Timi Jastai Ma - Live in Ramsterdam.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Sadhai Sari",
+    artist: "GrassTunes · Live in Ramsterdam",
+    src: "/Sadhai Sari - Live in Ramsterdam.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Sawari",
+    artist: "GrassTunes",
+    src: "/Sawari final version.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Go With The Flow",
+    artist: "GrassTunes",
+    src: "/Go with the flow.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Go With The Flow (Extended Mix)",
+    artist: "GrassTunes",
+    src: "/Go with the flow extended.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Nature Calls",
+    artist: "GrassTunes",
+    src: "/Grasstunes-Nature-Calls-cutdown.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Fly High (Jazzy Version)",
+    artist: "GrassTunes",
+    src: "/Fly High Jazzy.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Fall In Love Again",
+    artist: "GrassTunes",
+    src: "/Fall in love again.mp3",
+    cover: "/images/cover.jpg",
+  },
+];
 
 export const CONTACT_EMAIL = "GRASSTUNESOFFICIAL@GMAIL.COM";
 // Public Web3Forms access key tied to CONTACT_EMAIL — safe to expose client-side,
