@@ -121,7 +121,7 @@ export const FOCUS_SINGLE = {
 export const LIVE_TRACK = {
   title: "Timi Jastai Ma",
   artist: "GrassTunes · Live in Ramsterdam",
-  src: "/Timi Jastai Ma - Live in Ramsterdam.mp3",
+  src: "/playlist/Timi Jastai Ma - Live in Ramsterdam.mp3",
 };
 
 export interface Song {
@@ -135,13 +135,43 @@ export const SONGS: Song[] = [
   {
     title: "Timi Jastai Ma",
     artist: "GrassTunes · Live in Ramsterdam",
-    src: "/Timi Jastai Ma - Live in Ramsterdam.mp3",
+    src: "/playlist/Timi Jastai Ma - Live in Ramsterdam.mp3",
     cover: "/images/cover.jpg",
   },
   {
     title: "Sadhai Sari",
     artist: "GrassTunes · Live in Ramsterdam",
-    src: "/Sadhai Sari - Live in Ramsterdam.mp3",
+    src: "/playlist/Sadhai Sari - Live in Ramsterdam.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Sawari",
+    artist: "GrassTunes",
+    src: "/playlist/GrassTunes - Sawari.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Go With The Flow",
+    artist: "GrassTunes",
+    src: "/playlist/GrassTunes - Go With The Flow.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Nature Calls",
+    artist: "GrassTunes",
+    src: "/playlist/GrassTunes - Nature Calls.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Fly High",
+    artist: "GrassTunes",
+    src: "/playlist/GrassTunes - Fly High.mp3",
+    cover: "/images/cover.jpg",
+  },
+  {
+    title: "Fall In Love Again",
+    artist: "GrassTunes",
+    src: "/playlist/GrassTunes - Fall In Love Again.mp3",
     cover: "/images/cover.jpg",
   },
 ];
