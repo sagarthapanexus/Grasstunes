@@ -110,8 +110,6 @@ export const ANNOUNCEMENTS: Announcement[] = [
   },
 ];
 
-export const NEWS_ITEMS: string[] = ["EP – Coming soon!"];
-
 export const FOCUS_SINGLE = {
   title: "Sadhai Sari",
   label: "Focus Single",
