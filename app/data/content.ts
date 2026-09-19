@@ -134,8 +134,8 @@ export const NAV_LINKS = [
   { href: "/", label: "Overview" },
   { href: "/music", label: "Music" },
   { href: "/videos", label: "Videos" },
-  { href: "/media-coverage", label: "Media Coverage" },
-  { href: "/gallery", label: "Gallery" },
   { href: "/grassnews", label: "GrassNews" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/media-coverage", label: "Media Coverage" },
   { href: "/contact", label: "Contact" },
 ];
