@@ -26,7 +26,14 @@ export const metadata: Metadata = {
     description:
       "Alternative and funk-rock outfit from Kathmandu, Nepal. Formed 2016.",
     type: "website",
-    images: [{ url: "/favicon-192.png" }],
+    images: [{ url: "/images/logo.png", width: 5062, height: 1913, alt: "GrassTunes" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GrassTunes",
+    description:
+      "Alternative and funk-rock outfit from Kathmandu, Nepal. Formed 2016.",
+    images: ["/images/logo.png"],
   },
 };
 

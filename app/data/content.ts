@@ -111,7 +111,7 @@ export const LIVE_TRACK = {
 export const CONTACT_EMAIL = "GRASSTUNESOFFICIAL@GMAIL.COM";
 // Public Web3Forms access key tied to CONTACT_EMAIL — safe to expose client-side,
 // it only authorizes submissions to that inbox (not a secret credential).
-export const WEB3FORMS_ACCESS_KEY = "a7be75bc-6029-46cf-b933-6b31fac459bb";
+export const WEB3FORMS_ACCESS_KEY = "c9bd2fc2-d479-4a84-a4b1-16cfcbfc0bae";
 
 export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@Grasstunes/videos?view=0&sort=dd&shelf_id=1";
 
