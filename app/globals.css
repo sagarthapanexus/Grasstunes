@@ -733,92 +733,7 @@ textarea {
   color: var(--grass-green);
 }
 
-.list-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.list-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.list-thumb {
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.list-thumb-wide {
-  width: 80px;
-  height: 56px;
-}
-
-.list-title {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.list-subtitle {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-top: 2px;
-}
-
 /* ===== MUSIC PAGE ===== */
-
-.single-card {
-  display: flex;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(168, 230, 61, 0.1);
-  border-radius: 16px;
-  padding: 20px;
-}
-
-.single-cover {
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.single-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  justify-content: center;
-}
-
-.single-tag {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--grass-purple);
-  background: rgba(107, 92, 231, 0.15);
-  border-radius: 999px;
-  padding: 3px 10px;
-  width: fit-content;
-}
-
-.single-title {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.single-artist {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 4px;
-}
 
 .performance-list {
   list-style: none;
@@ -1940,4 +1855,14 @@ textarea {
   .volume-slider { width: 44px; }
   .play-btn { width: 40px; height: 40px; }
   .modal-panel { padding: 22px; }
+
+  .player-controls {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .progress-area {
+    order: 5;
+    flex-basis: 100%;
+  }
 }

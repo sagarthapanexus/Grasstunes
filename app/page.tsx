@@ -1,11 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   BAND,
   MEMBERS,
-  LIVE_TRACK,
-  FOCUS_SINGLE,
   PERFORMANCES,
+  SONGS,
   VIDEOS,
   YOUTUBE_CHANNEL_URL,
 } from "./data/content";
@@ -14,6 +12,7 @@ import BioText from "./components/BioText";
 import MembersSection from "./components/MembersSection";
 import ProfileHero from "./components/ProfileHero";
 import VideoLightbox from "./components/VideoLightbox";
+import SongList from "./components/SongList";
 
 export default function Home() {
   const bio = `${BAND.bio} ${BAND.bioExtended}`;
@@ -79,34 +78,7 @@ export default function Home() {
             All music
           </Link>
         </div>
-        <div className="list-rows">
-          <Link href="/music" className="list-row">
-            <Image
-              src={FOCUS_SINGLE.cover}
-              alt={FOCUS_SINGLE.title}
-              width={56}
-              height={56}
-              className="list-thumb"
-            />
-            <div>
-              <p className="list-title">{FOCUS_SINGLE.title}</p>
-              <p className="list-subtitle">GrassTunes</p>
-            </div>
-          </Link>
-          <Link href="/music" className="list-row">
-            <Image
-              src="/images/cover.jpg"
-              alt={LIVE_TRACK.title}
-              width={56}
-              height={56}
-              className="list-thumb"
-            />
-            <div>
-              <p className="list-title">{LIVE_TRACK.title}</p>
-              <p className="list-subtitle">{LIVE_TRACK.artist}</p>
-            </div>
-          </Link>
-        </div>
+        <SongList songs={SONGS} showList={false} />
 
         <div className="section-header-row split-subsection">
           <h2 className="section-title">Live History</h2>

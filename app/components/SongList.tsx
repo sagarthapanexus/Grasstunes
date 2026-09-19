@@ -5,7 +5,13 @@ import Image from "next/image";
 import type { Song } from "../data/content";
 import AudioPlayer, { type AudioPlayerHandle } from "./AudioPlayer";
 
-export default function SongList({ songs }: { songs: Song[] }) {
+export default function SongList({
+  songs,
+  showList = true,
+}: {
+  songs: Song[];
+  showList?: boolean;
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hasSelected, setHasSelected] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -47,6 +53,7 @@ export default function SongList({ songs }: { songs: Song[] }) {
         onPlayStateChange={setIsPlaying}
       />
 
+      {showList && (
       <ul className="song-list">
         {songs.map((song, i) => {
           const active = i === currentIndex;
@@ -102,6 +109,7 @@ export default function SongList({ songs }: { songs: Song[] }) {
           );
         })}
       </ul>
+      )}
     </div>
   );
 }

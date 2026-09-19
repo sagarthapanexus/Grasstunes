@@ -110,18 +110,6 @@ export const ANNOUNCEMENTS: Announcement[] = [
   },
 ];
 
-export const FOCUS_SINGLE = {
-  title: "Sadhai Sari",
-  label: "Focus Single",
-  cover: "/images/cover.jpg",
-};
-
-export const LIVE_TRACK = {
-  title: "Timi Jastai Ma",
-  artist: "GrassTunes · Live in Ramsterdam",
-  src: "/playlist/Timi Jastai Ma - Live in Ramsterdam.mp3",
-};
-
 export interface Song {
   title: string;
   artist: string;
