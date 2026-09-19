@@ -12,6 +12,9 @@
   --grass-black: #080808;
   --neon-green: #b8ff3e;
   --max-width: 1080px;
+  --waffle-accent: #6c6cc0;
+  --waffle-accent-hover: #8a8ad4;
+  --waffle-glow: #a3a3ff;
 }
 
 html, body {
@@ -1227,8 +1230,11 @@ textarea {
   height: 52px;
   border-radius: 50%;
   background: var(--grass-black);
-  border: 1px solid rgba(168, 230, 61, 0.25);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(163, 163, 255, 0.6);
+  box-shadow:
+    0 0 18px rgba(163, 163, 255, 0.55),
+    0 0 36px rgba(108, 108, 192, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1238,9 +1244,12 @@ textarea {
 
 .waffle-button:hover,
 .waffle-button.active {
-  border-color: rgba(168, 230, 61, 0.6);
+  border-color: rgba(163, 163, 255, 0.9);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(168, 230, 61, 0.2);
+  box-shadow:
+    0 0 26px rgba(163, 163, 255, 0.75),
+    0 0 50px rgba(108, 108, 192, 0.5),
+    0 10px 28px rgba(0, 0, 0, 0.5);
 }
 
 .waffle-dots {
@@ -1254,7 +1263,8 @@ textarea {
   width: 5px;
   height: 5px;
   border-radius: 1px;
-  background: var(--grass-green);
+  background: var(--waffle-glow);
+  box-shadow: 0 0 6px var(--waffle-glow), 0 0 2px #fff;
 }
 
 .waffle-panel {
@@ -1263,10 +1273,12 @@ textarea {
   bottom: calc(100% + 14px);
   width: 240px;
   background: #0e0e0e;
-  border: 1px solid rgba(168, 230, 61, 0.15);
+  border: 1px solid rgba(163, 163, 255, 0.4);
   border-radius: 14px;
   padding: 14px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  box-shadow:
+    0 0 24px rgba(108, 108, 192, 0.3),
+    0 16px 40px rgba(0, 0, 0, 0.55);
   animation: waffle-pop 0.15s ease;
 }
 
@@ -1302,7 +1314,7 @@ textarea {
 }
 
 .waffle-tile:hover {
-  background: rgba(168, 230, 61, 0.08);
+  background: rgba(108, 108, 192, 0.12);
   color: #fff;
 }
 
@@ -1313,19 +1325,21 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(168, 230, 61, 0.18), rgba(107, 92, 231, 0.18));
-  border: 1px solid rgba(168, 230, 61, 0.2);
-  color: var(--grass-green);
+  background: linear-gradient(135deg, rgba(108, 108, 192, 0.4), rgba(108, 108, 192, 0.18));
+  border: 1px solid rgba(163, 163, 255, 0.5);
+  color: var(--waffle-glow);
 }
 
 .waffle-tile-icon svg {
   width: 18px;
   height: 18px;
+  filter: drop-shadow(0 0 3px rgba(163, 163, 255, 0.6));
 }
 
 .waffle-tile:hover .waffle-tile-icon {
-  color: var(--neon-green);
-  border-color: rgba(168, 230, 61, 0.4);
+  color: #fff;
+  border-color: rgba(163, 163, 255, 0.85);
+  box-shadow: 0 0 14px rgba(163, 163, 255, 0.5);
 }
 
 @media (max-width: 480px) {
