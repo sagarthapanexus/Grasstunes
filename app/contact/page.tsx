@@ -18,7 +18,7 @@ export default function ContactPage() {
             For bookings, press inquiries, or collaboration requests, reach out to GrassTunes directly using the form below:
           </p>
           <p className="contact-note">
-            Technical rider, stage plot, and high-res promotional photos available upon request.
+            Electronic Press Kit (EPK) available upon request.
           </p>
 
           <h2 className="section-title">Send a Message</h2>

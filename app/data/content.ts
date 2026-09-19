@@ -79,15 +79,22 @@ export interface Performance {
 }
 
 export const PERFORMANCES: Performance[] = [
-  { venue: "Hamro Utsav", year: "2017" },
+  { venue: "Hamro Utsav, Band Competition, King's College", year: "2017" },
   { venue: "Patan College for Professional Studies", year: "2017" },
-  { venue: "Labim Mall", year: "2017" },
-  { venue: "Purple Haze", year: "2017" },
-  { venue: "Sofar Sounds", year: "2018" },
-  { venue: "Kathmandu Blues and Roots Festival", year: "2019" },
+  { venue: "Himalayan Java First Anniversary, Labim Mall", year: "2017" },
+  { venue: "Sofar Sounds Kathmandu", year: "2017" },
+  { venue: "Laya Chautari: An Evening of Spoken Art", year: "2018" },
+  { venue: "Good Times Rolling", year: "2019" },
+  { venue: "4th Kathmandu Blues and Roots Festival", year: "2019" },
   { venue: "Ramsterdam Cafe, Kathmandu", year: "2025" },
   { venue: "Tito's Pub, Thamel, Kathmandu", year: "2026" },
 ];
+
+export const MEDIA_COVERAGE_VIDEO_ID = "UFMl8Ccw3pQ";
+
+export const ANNOUNCEMENTS: string[] = ["EP – Coming soon!"];
+
+export const NEWS_ITEMS: string[] = ["EP – Coming soon!"];
 
 export const FOCUS_SINGLE = {
   title: "Sadhai Sari",
@@ -127,6 +134,8 @@ export const NAV_LINKS = [
   { href: "/", label: "Overview" },
   { href: "/music", label: "Music" },
   { href: "/videos", label: "Videos" },
+  { href: "/media-coverage", label: "Media Coverage" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/grassnews", label: "GrassNews" },
   { href: "/contact", label: "Contact" },
 ];

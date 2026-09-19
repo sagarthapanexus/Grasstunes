@@ -3,6 +3,7 @@ import "./globals.css";
 import BackgroundFX from "./components/BackgroundFX";
 import Footer from "./components/Footer";
 import DisableRightClick from "./components/DisableRightClick";
+import WaffleMenu from "./components/WaffleMenu";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.grasstunes.music"),
@@ -45,6 +46,7 @@ export default function RootLayout({
         <BackgroundFX />
         <main className="site-main">{children}</main>
         <Footer />
+        <WaffleMenu />
       </body>
     </html>
   );

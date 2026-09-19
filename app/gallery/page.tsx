@@ -22,7 +22,7 @@ export default function GalleryPage() {
         <section className="section">
           <GalleryLightbox images={GALLERY_IMAGES} />
           <p className="gallery-note">
-            Technical rider, stage plot, and high-res promotional photos available upon request.
+            Electronic Press Kit (EPK) available upon request.
           </p>
         </section>
       </div>

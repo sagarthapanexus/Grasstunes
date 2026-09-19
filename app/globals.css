@@ -929,6 +929,24 @@ textarea {
   border: none;
 }
 
+.media-embed-frame {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.media-embed-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .lightbox-close {
   position: fixed;
   top: 20px;
@@ -1193,6 +1211,132 @@ textarea {
 .btn-secondary:hover {
   border-color: rgba(168, 230, 61, 0.5);
   transform: translateY(-2px);
+}
+
+/* ===== WAFFLE MENU (sticky app-launcher, bottom-right) ===== */
+
+.waffle-menu {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+}
+
+.waffle-button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--grass-black);
+  border: 1px solid rgba(168, 230, 61, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.waffle-button:hover,
+.waffle-button.active {
+  border-color: rgba(168, 230, 61, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(168, 230, 61, 0.2);
+}
+
+.waffle-dots {
+  display: grid;
+  grid-template-columns: repeat(3, 5px);
+  grid-template-rows: repeat(3, 5px);
+  gap: 3px;
+}
+
+.waffle-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
+  background: var(--grass-green);
+}
+
+.waffle-panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 14px);
+  width: 240px;
+  background: #0e0e0e;
+  border: 1px solid rgba(168, 230, 61, 0.15);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  animation: waffle-pop 0.15s ease;
+}
+
+@keyframes waffle-pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.waffle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.waffle-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 4px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  text-align: center;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.waffle-tile:hover {
+  background: rgba(168, 230, 61, 0.08);
+  color: #fff;
+}
+
+.waffle-tile-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(168, 230, 61, 0.18), rgba(107, 92, 231, 0.18));
+  border: 1px solid rgba(168, 230, 61, 0.2);
+  color: var(--grass-green);
+}
+
+.waffle-tile-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.waffle-tile:hover .waffle-tile-icon {
+  color: var(--neon-green);
+  border-color: rgba(168, 230, 61, 0.4);
+}
+
+@media (max-width: 480px) {
+  .waffle-menu {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .waffle-panel {
+    width: 200px;
+  }
 }
 
 /* ===================================================
