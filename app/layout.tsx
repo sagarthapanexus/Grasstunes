@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import BackgroundFX from "./components/BackgroundFX";
 import Footer from "./components/Footer";
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Footer />
         <WaffleMenu />
       </body>
+      <GoogleAnalytics gaId="G-ZW2W6G18XR" />
     </html>
   );
 }
