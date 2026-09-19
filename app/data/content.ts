@@ -144,42 +144,6 @@ export const SONGS: Song[] = [
     src: "/Sadhai Sari - Live in Ramsterdam.mp3",
     cover: "/images/cover.jpg",
   },
-  {
-    title: "Sawari",
-    artist: "GrassTunes",
-    src: "/Sawari final version.mp3",
-    cover: "/images/cover.jpg",
-  },
-  {
-    title: "Go With The Flow",
-    artist: "GrassTunes",
-    src: "/Go with the flow.mp3",
-    cover: "/images/cover.jpg",
-  },
-  {
-    title: "Go With The Flow (Extended Mix)",
-    artist: "GrassTunes",
-    src: "/Go with the flow extended.mp3",
-    cover: "/images/cover.jpg",
-  },
-  {
-    title: "Nature Calls",
-    artist: "GrassTunes",
-    src: "/Grasstunes-Nature-Calls-cutdown.mp3",
-    cover: "/images/cover.jpg",
-  },
-  {
-    title: "Fly High (Jazzy Version)",
-    artist: "GrassTunes",
-    src: "/Fly High Jazzy.mp3",
-    cover: "/images/cover.jpg",
-  },
-  {
-    title: "Fall In Love Again",
-    artist: "GrassTunes",
-    src: "/Fall in love again.mp3",
-    cover: "/images/cover.jpg",
-  },
 ];
 
 export const CONTACT_EMAIL = "GRASSTUNESOFFICIAL@GMAIL.COM";
